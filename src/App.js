@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <MoviesContainer />
-        <Pagination/>
+      <Pagination/>
     </div>
   );
 }

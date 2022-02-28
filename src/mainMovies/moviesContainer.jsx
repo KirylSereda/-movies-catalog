@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Pagination from "../pagination/pagination";
 import { getMovies } from "../redux/movies-reducer";
 import Movie from "./movie/movie";
 import s from './moviesContainer.module.scss'

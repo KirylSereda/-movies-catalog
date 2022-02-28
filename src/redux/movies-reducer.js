@@ -4,10 +4,12 @@ const SET_LIST_MUVIES = 'SET_LISTMUVIES';
 const SET_MUVIE = 'SET_MUVIE';
 const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 
+
 const initialState = {
     movies: [],
     currentPage:1,
-    totalCount:100
+    perPage:10,
+    totalCount:115
 };
 
 const moviesReducer = (state = initialState, action) => {
@@ -36,9 +38,8 @@ const moviesReducer = (state = initialState, action) => {
     }
 };
 
-export const setMuvies = (movies) => ({ type: SET_LIST_MUVIES, movies });
+export const setMuviesAndtotalCount = (movies,totalCount) => ({ type: SET_LIST_MUVIES, movies,totalCount });
 
-export const setTotalCount = (totalCount) => ({ type: SET_LIST_MUVIES, totalCount });
 export const setCurrentPage = (currentPage) => ({ type: SET_CURRENT_PAGE, currentPage });
 
 export const getMovies = (currentPage) => {
@@ -52,8 +53,7 @@ export const getMovies = (currentPage) => {
             .then(response => {
                 let movies = response.data.Search;
                 let totalCount = response.data.totalResults
-                dispatch(setMuvies(movies));
-                dispatch(setTotalCount(totalCount))
+                dispatch(setMuviesAndtotalCount(movies,totalCount));
             });
     };
 };
