@@ -1,22 +1,19 @@
 import { useSelector } from "react-redux";
-import s from './pagination.module.scss'
+import s from './pagination.module.css'
 import cn from "classnames";
-import { setCurrentPage, setTotalCounte } from "../redux/movies-reducer";
 import { useDispatch } from "react-redux";
+import { AppStateType } from "../../store/redux-store";
+import { setCurrentPage } from "../../store/movies/movies-actions";
 import { createPages } from "../utils/pagesCreator";
 
 const Pagination = () => {
-    const currentPage = useSelector(state => state.moviesPage.currentPage)
-    const totalCount = useSelector(state => state.moviesPage.totalCount )
-    const perPage = useSelector(state => state.moviesPage.perPage)
-    const pagesCount = Math.ceil(totalCount/perPage)
-    console.log(pagesCount)
-    
-    
+    const currentPage = useSelector((state: AppStateType)=> state.moviesPage.currentPage)
+    const totalCount = useSelector((state: AppStateType)=> state.moviesPage.totalCount )
+    const chunk = useSelector((state: AppStateType) => state.moviesPage.chunk)
+    const pagesCount = Math.ceil(totalCount/chunk)
     const dispatch = useDispatch();
 
-
-    const pages = []
+    const pages:Array<number> = []
     
     createPages(pages,pagesCount,currentPage)
 
