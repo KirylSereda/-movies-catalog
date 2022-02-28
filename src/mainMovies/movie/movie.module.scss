@@ -1,0 +1,33 @@
+
+    .movie_inner {
+        width: 200px;
+        height: 350px;
+        float: left;
+        display: flex;
+        flex-direction:column;
+    
+
+    .movie_img {
+        width: 180px;
+        height: 230px;
+       
+        
+        border-radius: 5%;
+        
+    };
+
+    .movie_link {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 22px;
+        &:hover {
+            color: blue;
+        };
+        
+    };
+    .movie_release {
+        opacity: 0.6;
+        font-size: 18px;
+    };
+};
