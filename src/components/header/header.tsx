@@ -1,6 +1,6 @@
 import styles from './header.module.css'
 import userIcon from '../../assets/images/userIcon.png'
-
+import MoviesSearch from './moviesSearch/moviesSearch';
 
 const Header = () => {
     return (
@@ -9,7 +9,7 @@ const Header = () => {
                 Movies Catalog
             </div>
             <div>
-                <input />
+                <MoviesSearch/>
             </div>
             <div>
                 <div className={styles.user}> 

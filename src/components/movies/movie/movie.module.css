@@ -1,6 +1,6 @@
 .movie_inner {
     width: 200px;
-    height: 350px;
+    height: 430px;
     float: left;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@
     color: blue;
 }
 
-.movie_release {
+.description {
     opacity: 0.6;
     font-size: 18px;
 }

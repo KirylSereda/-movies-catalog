@@ -1,4 +1,4 @@
-import { MoviesActionType } from "./movies/movies-actions";
+import { MoviesActionType } from "./movies/movies.actions";
 
 //add more ActionTypes here.
 

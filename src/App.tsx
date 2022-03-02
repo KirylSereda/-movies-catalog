@@ -1,6 +1,6 @@
-import './App.css';
+import './app.css';
 import Header from './components/header/header';
-import Movies from './components/mainMovies/movies';
+import Movies from './components/movies/movies';
 import Pagination from './components/pagination/pagination';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Movies/>
       <Pagination/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
