@@ -1,4 +1,3 @@
-import './app.css';
 import Header from './components/header/header';
 import Movies from './components/movies/movies';
 import Pagination from './components/pagination/pagination';

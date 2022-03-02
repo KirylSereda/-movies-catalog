@@ -3,7 +3,8 @@ import {Action} from '../action'
 export enum MoviesActionType {
     SET_LIST_OF_MOVIES = "SET_LIST_OF_MOVIES",
     SET_CURRENT_PAGE = 'SET_CURRENT_PAGE',
-    SET_IS_FETCHING = 'SET_IS_FETCHING'
+    SET_IS_FETCHING = 'SET_IS_FETCHING',
+    SET_SEARCH_VALUE = 'SET_SEARCH_VALUE'
 }
 
 export interface Movie {
@@ -32,6 +33,11 @@ export const setCurrentPage = (currentPage:number):Action<number> => ({
 export const setIsFetching = (isFetching:boolean):Action<boolean> => ({ 
   type:MoviesActionType.SET_IS_FETCHING,
   payload:isFetching
+}
+)
+export const setSearch = (searchValue:string):Action<string> => ({ 
+  type:MoviesActionType.SET_SEARCH_VALUE,
+  payload:searchValue
 }
 )
 

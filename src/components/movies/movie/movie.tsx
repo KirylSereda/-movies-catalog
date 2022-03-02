@@ -8,13 +8,13 @@ interface Props {
 
 const Movie = (props: Props) => {
     const { movie } = props
-    return (<div className={styles.movie_inner} >
-        <img className={styles.movie_img} alt="userIcon" src={movie.Poster !== 'N/A' ? movie.Poster : poster} />
-        <div className={styles.movie_link}> {movie.Title}</div>
+    return (<div className={styles.movieInner} >
+        <img className={styles.movieImg} alt="userIcon" src={movie.Poster !== 'N/A' ? movie.Poster : poster} />
         <div className={styles.description}>
-            <div >Year:{movie.Year}</div>
-            <div >imdbID:{movie.imdbID}</div>
-            <div >Type:{movie.Type}</div>
+        <div className={styles.movieTitle}> {movie.Title}</div>
+            <div >Year: { movie.Year}</div>
+            <div >imdbID: { movie.imdbID}</div>
+            <div >Type: { movie.Type}</div>
         </div>
     </div>
     )

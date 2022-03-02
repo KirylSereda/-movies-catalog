@@ -8,6 +8,7 @@ export interface MoviesState {
   chunk: number; // Count of movies on the page.
   totalCount: number;
   isFetching: boolean
+  searchValue: string
 }
 
 const initialState: MoviesState = {
@@ -15,7 +16,8 @@ const initialState: MoviesState = {
   currentPage: 1,
   chunk: 10,
   totalCount: 115,
-  isFetching: false
+  isFetching: false,
+  searchValue: ''
 }
 
 export default createReducer(initialState, {
@@ -27,6 +29,9 @@ export default createReducer(initialState, {
     return { ...state, movies, totalCount }
   },
   [MoviesActionType.SET_IS_FETCHING](state: MoviesState, action: Action<boolean>) {
-        return { ...state, isFetching: action.payload }
-  }
-  })
+    return { ...state, isFetching: action.payload }
+  },
+  [MoviesActionType.SET_SEARCH_VALUE](state: MoviesState, action: Action<string>) {
+    return { ...state, searchValue: action.payload }
+  },
+})

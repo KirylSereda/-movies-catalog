@@ -1,7 +1,5 @@
-import { useEffect } from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useSelector } from "react-redux"
 import { Movie as MovieDto} from "../../store/movies/movies.actions"
-import { getMovies } from "../../store/movies/movies.thunk"
 import { AppState } from "../../store/redux.store"
 import Preloader from "../common/preloader"
 import Movie from "./movie/movie"
@@ -11,15 +9,19 @@ const Movies = () => {
 
     const ObjectMovies = useSelector((state: AppState) => state.movies.movies)
     const isFetching = useSelector((state: AppState) => state.movies.isFetching)
-       
-    return (
-        <div className={styles.movies_container}>
+    const totalCount = useSelector((state: AppState) => state.movies.totalCount)
+    const searchValue = useSelector((state: AppState) => state.movies.searchValue)
+    
+    return (<div className={styles.moviesContainer}>
+        <div className={styles.seachRezult}>You searched for: {searchValue}, {totalCount} result found  </div>
+        <div >
             {
             isFetching === false
              ?
             ObjectMovies.map((u:MovieDto) => <Movie movie={u} key={u.imdbID}
             />):<Preloader/>
             }
+        </div>
         </div>
     )
 }

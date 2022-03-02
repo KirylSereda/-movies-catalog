@@ -8,13 +8,13 @@ const Header = () => {
             <div className={styles.name_web}>
                 Movies Catalog
             </div>
-            <div>
+            <div >
                 <MoviesSearch/>
             </div>
             <div>
                 <div className={styles.user}> 
                      <img className={styles.user_img} src = {userIcon}/>
-                     <span> Виктор</span>
+                     <span> Alexander Borisenko</span>
                 </div>
             </div>
         </header>

@@ -1,8 +1,15 @@
-.movies_container {
+.moviesContainer {
     overflow: hidden;
     width: 100%;
     display: inline-flex;
     flex-wrap: wrap;
-    margin: 90px 20px 0px 20px;
+    margin: 30px;
+    display: flex;
+}
+
+.seachRezult {
+    font-weight:700;
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 

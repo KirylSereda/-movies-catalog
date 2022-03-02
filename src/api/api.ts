@@ -10,6 +10,6 @@ let requestConfig: AxiosRequestConfig = {
   },
 };
 
-const axiosInstance: AxiosInstance= axios.create(requestConfig);
+const axiosInstance: AxiosInstance = axios.create(requestConfig);
 
 export default axiosInstance;

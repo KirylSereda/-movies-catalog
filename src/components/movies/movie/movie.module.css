@@ -1,4 +1,4 @@
-.movie_inner {
+.movieInner {
     width: 200px;
     height: 430px;
     float: left;
@@ -6,25 +6,13 @@
     flex-direction: column;
 }
 
-.movie_img {
+.movieImg {
     width: 180px;
     height: 230px;
-    border-radius: 5%;
-}
-
-.movie_link {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 22px;
-}
-
-.movie_link:hover {
-    color: blue;
+    border-radius: 10%;
 }
 
 .description {
-    opacity: 0.6;
     font-size: 18px;
 }
 
