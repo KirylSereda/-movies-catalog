@@ -5,11 +5,13 @@
     flex-wrap: wrap;
     margin: 30px;
     display: flex;
+    margin-top: 90px;
 }
 
 .seachRezult {
     font-weight:700;
     font-size: 18px;
     margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
