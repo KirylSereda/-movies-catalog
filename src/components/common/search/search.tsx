@@ -15,7 +15,7 @@ const Search = () => {
         dispatch(setSearch(searchValue))
     }, [currentPage, searchValue, dispatch])
 
-     return (
+    return (
         <div >
             <input className={styles.input} onChange={(e) => setSearchValue(e.target.value)} defaultValue={searchValue} type='text' placeholder='Find a movie' />
         </div>

@@ -41,7 +41,7 @@ function Pagination() {
                 {portionNumber > 1 &&
                     <button className={styles.btn} onClick={() => { setPortionNumber(portionNumber - 1) }}>
                         &#60;
-                    </button>}
+                                  </button>}
                 {pages
                     .filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
                     .map((p) => {

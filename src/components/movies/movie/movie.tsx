@@ -11,10 +11,10 @@ const Movie = (props: Props) => {
     return (<div className={styles.movieInner} >
         <img className={styles.movieImg} alt="userIcon" src={movie.Poster !== 'N/A' ? movie.Poster : poster} />
         <div className={styles.description}>
-        <div className={styles.movieTitle}> {movie.Title}</div>
-            <div >Year: { movie.Year}</div>
-            <div >imdbID: { movie.imdbID}</div>
-            <div >Type: { movie.Type}</div>
+            <div className={styles.movieTitle}> {movie.Title}</div>
+            <div >Year: {movie.Year}</div>
+            <div >imdbID: {movie.imdbID}</div>
+            <div >Type: {movie.Type}</div>
         </div>
     </div>
     )

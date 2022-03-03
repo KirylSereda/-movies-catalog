@@ -1,17 +1,15 @@
-
 import Header from './components/header/header';
 import Movies from './components/movies/movies';
 import Pagination from './components/pagination/pagination';
 
-function App() {
-  
+function App () {
   return (
     <div >
-      <Header/>
+      <Header />
       <Movies/>
-      <Pagination/>
+      <Pagination />
     </div>
   )
 }
 
-export default App
+export default App;

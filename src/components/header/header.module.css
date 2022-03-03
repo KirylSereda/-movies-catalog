@@ -4,16 +4,16 @@
     background-color: rgb(186, 218, 237);
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     position: fixed;
-    top:0%
+    top: 0%
 }
 
 .nameWeb {
     font-size: 25px;
     margin-left: 50px;
-    color:black;
-    font-weight:700;
+    color: black;
+    font-weight: 700;
 }
 
 
@@ -30,4 +30,3 @@
     height: 38px;
     padding-right: 5px;
 }
-

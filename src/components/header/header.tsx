@@ -9,12 +9,12 @@ const Header = () => {
                 Movies Catalog
             </div>
             <div >
-                <Search/>
+                <Search />
             </div>
             <div>
-                <div className={styles.user}> 
-                     <img className={styles.userImg} src = {userIcon} alt='userIcon'/>
-                     <span> Alexander Borisenko</span>
+                <div className={styles.user}>
+                    <img className={styles.userImg} src={userIcon} alt='userIcon' />
+                    <span> Alexander Borisenko</span>
                 </div>
             </div>
         </header>
