@@ -4,4 +4,4 @@ const Preloader = () => {
     return <div className={styles.fetching} />
 }
 
-export default Preloader;
+export default Preloader

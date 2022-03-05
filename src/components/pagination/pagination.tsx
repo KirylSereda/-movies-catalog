@@ -1,13 +1,12 @@
-import { useSelector } from "react-redux";
+import { useSelector } from 'react-redux'
 import styles from './pagination.module.css'
-import { useDispatch } from "react-redux";
-import { AppState } from "../../store/redux.store";
-import { setCurrentPage } from "../../store/movies/movies.actions";
-import { useCallback, useEffect, useState } from "react";
-import cn from "classnames";
+import { useDispatch } from 'react-redux'
+import { AppState } from '../../store/redux.store'
+import { setCurrentPage } from '../../store/movies/movies.actions'
+import { useCallback, useEffect, useState } from 'react'
+import cn from 'classnames'
 
 function Pagination() {
-
     const currentPage = useSelector((state: AppState) => state.movies.currentPage)
     const totalCount = useSelector((state: AppState) => state.movies.totalCount)
     const chunk = useSelector((state: AppState) => state.movies.chunk)
@@ -18,47 +17,51 @@ function Pagination() {
     const pagesCount = Math.ceil(totalCount / chunk)
 
     const calculateCountOfPages = useCallback(() => {
-        const result = [];
+        const result = []
         for (let i = 0; i <= pagesCount; i++) {
-            result.push(i);
+            result.push(i)
         }
-        setPages(result);
-    }, [pagesCount]);
+        setPages(result)
+    }, [pagesCount])
 
     useEffect(() => {
-        calculateCountOfPages();
-    }, [calculateCountOfPages]);
+        calculateCountOfPages()
+    }, [calculateCountOfPages])
 
     const portionCount = Math.ceil(pagesCount / chunk)
     let leftPortionPageNumber = (portionNumber - 1) * chunk + 1
     let rightPortionPageNumber = portionNumber * chunk
 
     if (isFetching) {
-        return null;
-      }
-        return (
-            <div className={styles.pages}>
-                {portionNumber > 1 &&
-                    <button className={styles.btn} onClick={() => { setPortionNumber(portionNumber - 1) }}>
-                        &#60;
-                                  </button>}
-                {pages
-                    .filter(p => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
-                    .map((p) => {
-                        return <><span
+        return null
+    }
+    return (
+        <div className={styles.pages}>
+            {portionNumber > 1 && (
+                <button className={styles.btn} onClick={() => setPortionNumber(portionNumber - 1)}>
+                    &#60;
+                </button>
+            )}
+            {pages
+                .filter((p) => p >= leftPortionPageNumber && p <= rightPortionPageNumber)
+                .map((p) => {
+                    return (
+                        <span
                             key={p}
                             className={cn({ [styles.currentPage]: currentPage === p }, styles.page)}
-                            onClick={() => {
-                                dispatch(setCurrentPage(p))
-                            }}>{p}</span></>
-                    })}
-                {portionCount > portionNumber &&
-                    <button className={styles.btn} onClick={() => { setPortionNumber(portionNumber + 1) }}>
-                        &#62;
-                    </button>}
-            </div>
-            )
-    }
+                            onClick={() => dispatch(setCurrentPage(p))}
+                        >
+                            {p}
+                        </span>
+                    )
+                })}
+            {portionCount > portionNumber && (
+                <button className={styles.btn} onClick={() => setPortionNumber(portionNumber + 1)}>
+                    &#62;
+                </button>
+            )}
+        </div>
+    )
+}
 
-export default Pagination;
-
+export default Pagination
