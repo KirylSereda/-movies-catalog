@@ -13,13 +13,16 @@ const Movie = (props: Props) => {
             <img
                 className={styles.movieImg}
                 alt="userIcon"
-                src={movie.Poster !== 'N/A' ? movie.Poster : poster}
+                src={
+                    movie.backdrop_path !== null
+                        ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
+                        : poster
+                }
             />
             <div className={styles.description}>
-                <div className={styles.movieTitle}> {movie.Title}</div>
-                <div>Year: {movie.Year}</div>
-                <div>imdbID: {movie.imdbID}</div>
-                <div>Type: {movie.Type}</div>
+                <div className={styles.movieTitle}> {movie.original_title}</div>
+                <div>Year: {movie.release_date}</div>
+                <div>imdbID: {movie.id}</div>
             </div>
         </div>
     )

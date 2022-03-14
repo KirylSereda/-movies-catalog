@@ -1,30 +1,20 @@
 .headerContener {
-    height: 70px;
+    height: 90px;
     width: 100%;
-    background-color: rgb(186, 218, 237);
+    background-color: #1A1F38;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: sticky;
+	z-index: 100;
     top: 0%
 }
 
 .nameWeb {
-    font-size: 25px;
-    margin-left: 50px;
-    color: black;
+    font-size: 48px;
+    margin-left: 40px;
+    color: white;
     font-weight: 700;
 }
 
-.user {
-    color: black;
-    display: flex;
-    align-items: center;
-    margin-right: 50px;
-}
 
-.userImg {
-    width: 30px;
-    height: 38px;
-    padding-right: 5px;
-}

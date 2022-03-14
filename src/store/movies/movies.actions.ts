@@ -8,11 +8,20 @@ export enum MoviesActionType {
 }
 
 export interface Movie {
-    Poster: string
-    Title: string
-    Type: string
-    Year: string
-    imdbID: string
+    adult: boolean
+    backdrop_path: string
+    genre_ids: Array<Number>
+    id: number
+    original_language: String
+    original_title: string
+    overview: string
+    popularity: number
+    poster_path: string
+    release_date: string
+    title: string
+    video: false
+    vote_average: number
+    vote_count: number
 }
 
 export interface MoviesResponse {

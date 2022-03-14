@@ -1,17 +1,15 @@
+
 .moviesContainer {
-    overflow: hidden;
-    width: 100%;
-    display: inline-flex;
-    flex-wrap: wrap;
-    margin: 30px;
-    display: flex;
-    margin-top: 90px;
+	margin-top: 90px;
+	margin-left: 40px ;
+  	display: flex;
+	flex-wrap: wrap;
+    color: aliceblue;
 }
 
 .seachRezult {
     font-weight: 700;
     font-size: 18px;
     width: 100%;
-    margin-bottom: 15px;
     margin-bottom: 25px;
 }

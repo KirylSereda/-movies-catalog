@@ -14,7 +14,8 @@ function Pagination() {
     const isFetching = useSelector((state: AppState) => state.movies.isFetching)
     const [portionNumber, setPortionNumber] = useState(1)
     const [pages, setPages] = useState<number[]>([])
-    const pagesCount = Math.ceil(totalCount / chunk)
+
+    const pagesCount = Math.ceil(totalCount / 20) //20 movies on page
 
     const calculateCountOfPages = useCallback(() => {
         const result = []
@@ -31,7 +32,7 @@ function Pagination() {
     const portionCount = Math.ceil(pagesCount / chunk)
     let leftPortionPageNumber = (portionNumber - 1) * chunk + 1
     let rightPortionPageNumber = portionNumber * chunk
-
+    console.log(portionNumber)
     if (isFetching) {
         return null
     }

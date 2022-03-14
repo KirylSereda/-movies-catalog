@@ -20,11 +20,11 @@ const Movies = () => {
             <div className={styles.seachRezult}>
                 You searched for: {searchValue}, {totalCount} result found{' '}
             </div>
-            <div>
+            <>
                 {objectMovies.map((u: MovieDto) => (
-                    <Movie movie={u} key={u.imdbID} />
+                    <Movie movie={u} key={u.id} />
                 ))}
-            </div>
+            </>
         </div>
     )
 }
